@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+figure {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  border-bottom: 1px solid #111;
+  text-align: center;
+}
+.filters button {
+  background: lightgreen;
+  border: lightgreen;
+  padding: 6px 12px;
+  text-align: center;
+  color: #000;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin: 0 8% 5px;
+  min-width: 15%;
+}
+.filters button:hover,
+.filters button.active {
+  background: rgb(93, 139, 89);
+  border: rgb(93, 139, 89);
+}
+.launch-program-no-results {
+  text-align: center;
+  margin-top: 215px;
+}
+
+.container {
+  max-width: 1440px;
+  // min-width: 1024px;
+  width: 100%;
+  margin: auto;
+  background: #e3e3e3;
+  display: table;
+  padding: 15px;
+}
+aside {
+  width: 15%;
+  background: #fff;
+  padding: 8px;
+  float: left;
+}
+.card {
+  padding: 10px;
+  background: #fff;
+}
+
+.grid-container {
+  width: 85%;
+  min-width: 85%;
+  float: right;
+  display: grid;
+  // grid-template-columns: auto auto auto auto;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
+  background: #e3e3e3;
+  padding: 0 10px;
+}
+
+.grid-container > div {
+  background-color: #e3e3e3;
+  text-align: center;
+  font-size: 15px;
+}
+
+img {
+  height: 256px;
+  width: 256px;
+  max-width: 100%;
+  background: #e3e3e3;
+  object-fit: contain;
+}
+.card-content h3 {
+  font-size: 16px;
+  color: rgb(1, 44, 138);
+}
+.card-content {
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+  p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.card-content p span {
+  color: rgb(42, 84, 148);
+  margin-left: auto;
+}
+
+.card-content > li {
+  color: rgb(42, 84, 148);
+  margin-left: auto;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+}
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (min-width: 700px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 699px) {
+  aside {
+    width: 100%;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+    width: 100%;
+    padding: 15px 0 0 0;
+  }
+}
