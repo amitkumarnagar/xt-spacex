@@ -7,7 +7,7 @@ function Listing({ listing }) {
     event.target.src = defaultImage;
   }
   return listing.map((launch) =>
-    <div key={launch.flight_number}>
+    <div className="card-container" key={launch.flight_number}>
       <div className="card">
         <figure>
           <img

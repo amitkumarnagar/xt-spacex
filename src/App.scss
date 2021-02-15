@@ -1,8 +1,15 @@
 * {
   box-sizing: border-box;
 }
+
 html,
-body,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
 figure {
   padding: 0;
   margin: 0;
@@ -11,6 +18,7 @@ figure {
   display: flex;
   justify-content: center;
 }
+
 h1 {
   font-size: 32px;
   font-weight: 700;
@@ -55,7 +63,6 @@ h4 {
 
 .container {
   max-width: 1440px;
-  // min-width: 1024px;
   width: 100%;
   margin: auto;
   background: #e3e3e3;
@@ -63,7 +70,7 @@ h4 {
   padding: 15px;
 }
 aside {
-  width: 15%;
+  width: 180px;
   background: #fff;
   padding: 8px;
   float: left;
@@ -74,21 +81,22 @@ aside {
 }
 
 .grid-container {
-  width: 85%;
-  min-width: 85%;
-  float: right;
-  display: grid;
-  // grid-template-columns: auto auto auto auto;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 10px;
+  width: calc(100% - 180px);
+  display: flex;
+  flex-wrap: wrap;
   background: #e3e3e3;
   padding: 0 10px;
 }
 
-.grid-container > div {
+.card-container {
   background-color: #e3e3e3;
   text-align: center;
   font-size: 15px;
+  width: calc(25% - 12px);
+  margin-bottom: 15px;
+  &:not(:nth-child(4n)) {
+    margin-right: 15px;
+  }
 }
 
 img {
@@ -128,21 +136,34 @@ img {
 }
 @media (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+  .card-container {
+    width: calc(50% - 15px);
+    margin-bottom: 10px;
+    margin-right: 0;
+    &:not(:nth-child(4n)) {
+      margin-right: 0;
+    }
   }
 }
-@media (min-width: 700px) and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: auto auto;
-  }
-}
+
 @media (max-width: 699px) {
   aside {
     width: 100%;
   }
   .grid-container {
-    grid-template-columns: auto;
     width: 100%;
-    padding: 15px 0 0 0;
+    padding: 0;
+    margin-top: 15px;
+  }
+  .card-container {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 0;
+    }
   }
 }
