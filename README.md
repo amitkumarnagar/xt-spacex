@@ -10,6 +10,9 @@ We have used Express.js for Server side rendering.
 - `react-loadable` for dynamic imports and load components asynchronously.
 - `axios` for network requests.
 
+## Demo
+https://xt-spacex.netlify.app
+
 ## Available Scripts
 
 In the project directory, you can run:
